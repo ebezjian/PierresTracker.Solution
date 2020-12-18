@@ -14,5 +14,10 @@ namespace Tracker.Models
     {
 
     }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }
