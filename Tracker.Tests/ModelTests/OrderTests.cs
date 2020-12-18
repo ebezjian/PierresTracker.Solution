@@ -88,5 +88,18 @@ namespace Tracker.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      string description01 = "Coffee Beans";
+      string description02 = "Coffee Mugs";
+      Order newOrder1 = new Order(description01);
+      Order newOrder2 = new Order(description02);
+      //Act
+      Order result = Order.Find(3);
+      //Assert 
+      Assert.AreEqual(newOrder1, result);
+    }
   }
 } 
