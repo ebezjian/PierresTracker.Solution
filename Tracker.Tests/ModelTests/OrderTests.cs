@@ -48,7 +48,7 @@ namespace Tracker.Tests
       string result = newOrder.Description;
 
       //Assert
-      Assert.AreEqual(newOrder, result);
+      Assert.AreEqual(updatedDescription, result);
     }
   }
 } 
