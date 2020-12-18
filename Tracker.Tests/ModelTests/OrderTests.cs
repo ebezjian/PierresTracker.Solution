@@ -7,12 +7,12 @@ namespace Tracker.Tests
 {
   [TestClass]
 
-  public class OrderTest 
+  public class OrderTest : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   Order.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
     [TestMethod]
     public void OrderConstructor_CreatesInstancesofOrder_Order()
