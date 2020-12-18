@@ -45,7 +45,7 @@ public class VendorTest: IDisposable
     int result = newVendor.Id;
 
     //Assert
-    Assert.AreEqual(2, result);
+    Assert.AreEqual(1, result);
   }
 
 }
