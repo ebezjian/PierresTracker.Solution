@@ -18,7 +18,7 @@ public class VendorTest: IDisposable
   public void VendorConstructor_CreatesInstanceOfVendor_Category()
   {
     Vendor newVendor = new Vendor("test vendor");
-    Assert.AreEqual(typeof(int), newVendor.GetType());
+    Assert.AreEqual(typeof(Vendor), newVendor.GetType());
   }
 }
 }
