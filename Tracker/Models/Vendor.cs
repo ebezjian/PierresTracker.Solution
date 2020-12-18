@@ -8,7 +8,7 @@ namespace Tracker.Models
     List<Vendor> { };
     public string Name { get; set;}
     public int Id { get;}
-    public List<Order> Order { get; set;}
+    // public List<Order> Order { get; set;}
 
     public Vendor(string vendorName)
     {
