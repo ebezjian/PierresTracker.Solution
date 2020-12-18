@@ -64,5 +64,21 @@ public class VendorTest: IDisposable
     //Assert
     CollectionAssert.AreEqual(newList, result);
   }
+
+  [TestMethod]
+  public void Find_ReturnsCorrectVendor_Vendor()
+  {
+    //Arrange 
+    string name01 = "Cafe Latte";
+    string name02 = "Tom's Bistro";
+    Vendor newVendor1 = new Vendor(name01);
+    Vendor newVendor2 = new Vendor(name02);
+
+    //Act
+    Vendor result = Vendor.Find(3);
+
+    //Assert 
+    Assert.AreEqual(newVendor2, result);
+  }
 }
 }
