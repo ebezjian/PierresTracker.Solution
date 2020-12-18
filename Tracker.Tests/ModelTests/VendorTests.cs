@@ -75,7 +75,7 @@ public class VendorTest: IDisposable
     Vendor newVendor2 = new Vendor(name02);
 
     //Act
-    Vendor result = Vendor.Find(3);
+    Vendor result = Vendor.Find(2);
 
     //Assert 
     Assert.AreEqual(newVendor2, result);
