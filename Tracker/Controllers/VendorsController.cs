@@ -33,7 +33,7 @@ namespace Tracker.Controllers
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor selectedVendor = Vendor.Find(id);
       List<Order> vendorOrders = selectedVendor.Orders;
-      model.Add("vendor", selectedVendor);
+      model.Add("vendors", selectedVendor);
       model.Add("orders", vendorOrders);
       return View(model);
     }
@@ -47,7 +47,7 @@ namespace Tracker.Controllers
       foundVendor.AddItem(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
-      model.Add("vendor", foundVendor);
+      model.Add("vendors", foundVendor);
       return View("Show", model);
     }
   }
