@@ -97,9 +97,9 @@ namespace Tracker.Tests
       Order newOrder1 = new Order(description01);
       Order newOrder2 = new Order(description02);
       //Act
-      Order result = Order.Find(3);
+      Order result = Order.Find(2);
       //Assert 
-      Assert.AreEqual(newOrder1, result);
+      Assert.AreEqual(newOrder2, result);
     }
   }
 } 

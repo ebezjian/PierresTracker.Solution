@@ -8,7 +8,7 @@ namespace Tracker.Models
     List<Vendor> { };
     public string Name { get; set;}
     public int Id { get;}
-    // public List<Order> Order { get; set;}
+    public List<Order> Orders { get; set;}
 
     public Vendor(string vendorName)
     {
@@ -33,9 +33,9 @@ namespace Tracker.Models
       return _instances[searchId -1];
     }
 
-    // public void AddItem(Order order)
-    // {
-    //   Orders.Add(order);
-    // }
+    public void AddItem(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }
