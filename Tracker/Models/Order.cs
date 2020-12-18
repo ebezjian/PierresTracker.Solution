@@ -14,9 +14,9 @@ namespace Tracker.Models
     }
     public Order(string description)
     {
-      Description = description;
-      _instances.Add(this);
-      Id = _instances.Count;
+      // Description = description;
+      // _instances.Add(this);
+      // Id = _instances.Count;
     }
   }
 }
