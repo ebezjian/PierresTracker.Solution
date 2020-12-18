@@ -19,9 +19,9 @@ namespace Tracker.Models
       Id = _instances.Count;
     }
 
-    // public static List<Order> GetAll()
-    // {
-
-    // }
+    public static List<Order> GetAll()
+    {
+      return _instances;
+    }
   }
 }

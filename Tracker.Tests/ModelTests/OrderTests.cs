@@ -7,12 +7,12 @@ namespace Tracker.Tests
 {
   [TestClass]
 
-  public class OrderTest : IDisposable
+  public class OrderTest 
   {
-    public void Dispose()
-    {
-      Order.ClearAll();
-    }
+    // public void Dispose()
+    // {
+    //   Order.ClearAll();
+    // }
 
     [TestMethod]
     public void OrderConstructor_CreatesInstancesofOrder_Order()
@@ -49,6 +49,17 @@ namespace Tracker.Tests
 
       //Assert
       Assert.AreEqual(updatedDescription, result);
+    }
+    
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      //Arrange
+      List<Order> newList = new List<Order> { };
+      //Act
+      List<Order> result = Order.GetAll();
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 } 
