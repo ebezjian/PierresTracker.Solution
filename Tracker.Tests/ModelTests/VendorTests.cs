@@ -32,7 +32,7 @@ public class VendorTest: IDisposable
     string result = newVendor.Name;
 
     //Assert
-    Assert.AreEqual(1, result);
+    Assert.AreEqual(name, result);
   }
 }
 }
