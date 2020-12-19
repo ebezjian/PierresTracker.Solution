@@ -49,6 +49,7 @@ namespace Tracker.Controllers
       model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
       return View("Show", model);
+
     }
   }
 }
