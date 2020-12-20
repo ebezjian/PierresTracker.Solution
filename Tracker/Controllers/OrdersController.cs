@@ -20,7 +20,7 @@ namespace Tracker.Controllers
       Vendor vendor = Vendor.Find(vendorId);
       Dictionary<string, object> model = new Dictionary<string, object>();
       model.Add("orders", order);
-      model.Add("vendors", vendor);
+      model.Add("vendor", vendor);
       return View(model);
     }
 
