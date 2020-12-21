@@ -93,6 +93,5 @@ namespace Tracker.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
-
   }
 }

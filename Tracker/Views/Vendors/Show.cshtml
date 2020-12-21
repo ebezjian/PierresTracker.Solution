@@ -1,13 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
 @using Tracker.Models;
 
 <h3>Here are all the orders for this vendor:</h3>
+<h3>@Model["vendor"].Name</h3>
+<h4>@Model["vendor"].VDescription</h4>
 
-<ol>
+@if (@Model["orders"].Count == 0)
+{
+  <p>Currently no orders on record for @Model["vendor"].Name</p>
+}
 @foreach(Order order in @Model["orders"])
 {
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
+  <p><a class="vendorDisplay" href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></p>
 }
-</ol>
+
 
 <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
 <p><a href='/vendors'>Return to vendor list</a></p>
