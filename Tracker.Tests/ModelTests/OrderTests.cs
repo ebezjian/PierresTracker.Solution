@@ -43,12 +43,42 @@ namespace Tracker.Tests
     [TestMethod]
     public void OrderConstructor_ReturnsOrderPrice_Int()
     {
-      string title = "TestOrder";
-      string description = "testExample";
-      int price = 8;
+      string title = "TestTitle";
+      string description = "testDescription";
+      int price = 10;
       Order newOrder = new Order(title, description, price, "13/12/2023");
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
+    }
+
+    [TestMethod]
+    public void OrderConstructor_ReturnsOrderDate_String()
+    {
+      string title = "TestTitle";
+      string description = "testDescription";
+      int price = 10;
+      string date = "13/12/2023";
+      Order newOrder = new Order(title, description, price, date);
+      string result = newOrder.Date;
+      Assert.AreEqual (date, result);
+    }
+
+        [TestMethod]
+    public void GetOrders_ReturnsListofOrderObjects_OrderList()
+    {
+      string title1 = "TestTitle1";
+      string description1 = "testDescription1";
+      int price1 = 10;
+      string date1 = "13/12/2023";
+      string title2 = "TestOrder2";
+      string description2 = "testDescription2";
+      int price2 = 10;
+      string date2 = "13/12/2023";
+      Order newOrder1 = new Order(title1, description1, price1, date1);
+      Order newOrder2 = new Order(title2, description2, price2, date2);
+      List<Order> newOrderList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newOrderList, result);
     }
 
 
