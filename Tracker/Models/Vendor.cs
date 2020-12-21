@@ -20,7 +20,7 @@ namespace Tracker.Models
       Orders = new List<Order> { };
       
     }
-    public static List<Vendor> GetAll()
+    public static List<Vendor> GetVendor()
     {
       return _instances;
     }
