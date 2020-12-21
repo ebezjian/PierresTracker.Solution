@@ -10,8 +10,10 @@
   <h4 class="link"><a href="/vendors" >Back to All Vendors</a></h4>
 </div>
 <div class="container" id="center-this">
-      <h4>Title: @Model["order"].Title</h4>
-    <h4>Description: @Model["order"].Description</h4>
-    <h4>Price: $@Model["order"].Price</h4>
-    <h4>Date: @Model["order"].Date</h4>
+    <h2>Order Summery:</h2>
+    <h4>Title: @Model["orders"].Title</h4>
+    <h4>Description: @Model["orders"].Description</h4>
+    <h4>Price: $@Model["orders"].Price</h4>
+    <h4>Date: @Model["orders"].Date</h4>
+    <h4>Vendor: @Model["vendor"].Name</h2>
 </div>

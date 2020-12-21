@@ -4,7 +4,7 @@ namespace Tracker.Models
 {
   public class Vendor
   {
-    public string VDescription {get;set;}
+    public string VDescription { get; set;}
     
     public string Name { get; set; }
     public int Id { get; }

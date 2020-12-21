@@ -4,13 +4,13 @@ namespace Tracker.Models
 {
   public class Order
   {
-    public string Title {get;set;}
+    public string Title { get; set;}
     public string Description { get; set; }
 
-    public int Price {get;set;}
-    public string Date {get;set;}
+    public int Price { get; set;}
+    public string Date { get; set;}
     public int Id { get; }
-    private static List<Order> _instances = new List<Order> { };
+    private static List<Order> _orderList = new List<Order> { };
     
     public Order(string title, string description, int price, string date)
     {
@@ -18,23 +18,23 @@ namespace Tracker.Models
       Description = description;
       Price = price;
       Date = date;
-      _instances.Add(this);
-      Id = _instances.Count;
+      _orderList.Add(this);
+      Id = _orderList.Count;
     }
 
     public static List<Order> GetAll()
     {
-      return _instances;
+      return _orderList;
     }
 
     public static void ClearAll()
     {
-      _instances.Clear();
+      _orderList.Clear();
     }
 
     public static Order Find(int id)
     {
-      return _instances[id -1];
+      return _orderList[id -1];
     }
   }
 }
