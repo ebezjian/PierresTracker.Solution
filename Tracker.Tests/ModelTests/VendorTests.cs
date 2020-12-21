@@ -53,5 +53,15 @@ namespace Tracker.Tests
       CollectionAssert.AreEqual(newVendorList, result);
     }
 
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      string vendorName = "TestVendor";
+      string vendorDescription = "testDescription";
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
