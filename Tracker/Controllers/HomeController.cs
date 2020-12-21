@@ -12,12 +12,5 @@ namespace Tracker.Controllers
     {
       return View();
     }
-    [HttpPost("/")]
-    public ActionResult Create(string name, string description)
-    {
-      Vendor newVendor = new Vendor (name, description);
-      return RedirectToAction("Index");
-    }
-
   }
 }
