@@ -27,7 +27,7 @@ namespace Tracker.Models
       return _instances;
     }
 
-   public static void ClearAll()
+    public static void ClearAll()
     {
       _instances.Clear();
     }
