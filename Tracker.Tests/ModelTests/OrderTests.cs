@@ -93,6 +93,23 @@ namespace Tracker.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string title1 = "TestTitle1";
+      string description1 = "testDescription1";
+      int price1 = 10;
+      string date1 = "13/12/2023";
+      string title2 = "TestOrder2";
+      string description2 = "testDescription2";
+      int price2 = 10;
+      string date2 = "13/12/2023";
+      Order newOrder1 = new Order(title1, description1, price1, date1);
+      Order newOrder2 = new Order(title2, description2, price2, date2);
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
+
 
 
 
