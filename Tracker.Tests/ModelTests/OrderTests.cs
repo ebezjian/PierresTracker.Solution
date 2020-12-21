@@ -81,6 +81,18 @@ namespace Tracker.Tests
       CollectionAssert.AreEqual(newOrderList, result);
     }
 
+    [TestMethod]
+    public void GetId_ReturnsOrderId_Int()
+    {
+      string title = "TestTitle";
+      string description = "testDescription";
+      int price = 10;
+      string date = "13/12/2023";
+      Order newOrder = new Order(title, description, price, date);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
+
 
 
 
