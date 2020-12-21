@@ -35,7 +35,7 @@ namespace Tracker.Models
       return _instances[id -1];
     }
 
-    public void AddItem(Order order)
+    public void AddOrder(Order order)
     {
       Orders.Add(order);
     }
