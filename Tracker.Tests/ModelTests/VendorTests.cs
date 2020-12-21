@@ -39,5 +39,19 @@ namespace Tracker.Tests
       Assert.AreEqual(vendorDescription, result);
     }
 
+    [TestMethod]
+    public void GetVendors_ReturnsListofVendorObjects_VendorList()
+    {
+      string vendorName1 = "TestVendor1";
+      string vendorDescription1 = "testDescription1";
+      string vendorName2 = "TestVendor2";
+      string vendorDescription2 = "testDescription2";
+      Vendor newVendor1 = new Vendor(vendorName1, vendorDescription1);
+      Vendor newVendor2 = new Vendor(vendorName2, vendorDescription2);
+      List<Vendor> newVendorList = new List<Vendor> { newVendor1, newVendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newVendorList, result);
+    }
+
   }
 }
