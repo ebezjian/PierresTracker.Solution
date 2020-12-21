@@ -4,7 +4,7 @@ namespace Tracker.Models
 {
   public class Vendor
   {
-    public string Description {get;set;}
+    public string VDescription {get;set;}
     
     public string Name { get; set; }
     public int Id { get; }
@@ -14,7 +14,7 @@ namespace Tracker.Models
     public Vendor(string vendorName, string vendorDescription)
     {
       Name = vendorName;
-      Description = vendorDescription;
+      VDescription = vendorDescription;
       _instances.Add(this);
       Id = _instances.Count;
       Orders = new List<Order> { };
