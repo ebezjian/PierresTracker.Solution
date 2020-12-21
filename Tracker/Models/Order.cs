@@ -32,9 +32,9 @@ namespace Tracker.Models
       _instances.Clear();
     }
 
-    public static Order Find(int searchId)
+    public static Order Find(int id)
     {
-      return _instances[searchId -1];
+      return _instances[id -1];
     }
   }
 }

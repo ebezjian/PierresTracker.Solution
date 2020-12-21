@@ -1,11 +1,17 @@
+@using Tracker.Models;
 @{
   Layout = "_Layout";
 }
 
-<h1>Bakery Order Details: </h1>
 
-<h2>@Model["orders"].Description</h2>
-<h3>Vendor: @Model["vendor"].Name</h3>
 
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
-<a href='/vendors'>View all vendors</a>
+<div class="links">
+  <h4 class="link"><a href="/" >Back to Home</a></h4>
+  <h4 class="link"><a href="/vendors" >Back to All Vendors</a></h4>
+</div>
+<div class="container" id="center-this">
+      <h4>Title: @Model["order"].Title</h4>
+    <h4>Description: @Model["order"].Description</h4>
+    <h4>Price: $@Model["order"].Price</h4>
+    <h4>Date: @Model["order"].Date</h4>
+</div>
